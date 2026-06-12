@@ -3,7 +3,7 @@
 
 Ta xét riêng hai trường hợp $k = 0$ và $k > 0$.
 
-### Trường hợp 1. $k = 0$
+### Trường hợp $k = 0$
 Khi đó ban đầu toàn bộ đoạn $[1, N]$ đều chưa được lấy. Ta có thể xây dựng chiến thuật thằng bằng cách "chơi đối xứng" như sau:
 - Ở lượt chơi đầu, giành quyền đi trước. Sau đó, nếu $N$ lẻ ta lấy đoạn $\left[\frac{N + 1}{2}, \frac{N + 1}{2}\right]$; ngược lại nếu $N$ chẵn ta lấy đoạn $\left[\frac{N}{2}, \frac{N}{2} + 1\right]$. Hay nói cách khác, ta lấy những viên sỏi ở trung tâm.
 - Từ các lượt sau, nếu máy lấy đoạn $[L, R]$, ta lấy đoạn đối xứng với nó qua trung tâm là đoạn $[N - R + 1, N - L + 1]$. Vì trạng thái các viên sỏi chưa bị lấy luôn được giữ đối xứng, nên mỗi khi máy có một nước đi hợp lệ thì nước đi đối xứng của ta cũng hợp lệ.
