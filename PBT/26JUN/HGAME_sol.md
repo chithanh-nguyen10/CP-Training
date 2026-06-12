@@ -19,7 +19,7 @@ $$g(l_1) \oplus g(l_2) \oplus \ldots \oplus g(l_p) \neq 0$$
 
 Ta cần tính trước các giá trị $g(x)$. Với $x = 0$, dễ thấy đây là trạng thái thua nên $g(0) = 0$. Với $x > 0$, khi lấy một đoạn liên tiếp độ dài $i \ (1 \leq i \leq 10)$, đoạn ban đầu bị tách ra làm hai đoạn độ dài $a, b$ sao cho $a + i + b = x$. Theo định nghĩa của hàm Grundy, ta có:
 
-$$g(x) = \textrm{mex}\{g(a) \oplus g(b) \mid a,b\geq 0, 1\leq i \leq 10,a+i+b=x\}$$
+$$g(x) = \textrm{mex}\\{g(a) \oplus g(b) \mid a,b\geq 0, 1\leq i \leq 10,a+i+b=x\\}$$
 
 Tuy nhiên để truy vấn mex, ta cần sử dụng một cấu trúc dữ liệu chẳng hạn như `std::set`, dẫn đến độ phức tạp là $\mathcal{O}(N^2\log N)$ với hằng số lớn, sẽ không đủ nhanh với time limit. Một cách xử lý đơn giản là tận dụng việc $N$ chỉ có thể lên đến $5000$ nên ta có thể tính trước sau đó tạo mảng hằng để sử dụng sau:
 
